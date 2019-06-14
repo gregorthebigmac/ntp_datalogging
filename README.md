@@ -1,0 +1,2 @@
+# ntp_datalogging
+This is a very specific thing that probably nobody needs but me in my lab, but it is a two-part program that's meant to run on two machines. One part runs on a Linux NTP server (running chrony) while the other is a Windows NTP client getting its time from the Linux NTP server. The Linux machine is pinging the Windows client and logging ping times in ms, while the Windows machine continuously polls the NTP server for time differences and logs it to a file.
