@@ -1,0 +1,1 @@
+w32tm /stripchart /computer:[hostname or ip goes here] /samples:5000 | Out-File -Append -FilePath .\time_log.csv

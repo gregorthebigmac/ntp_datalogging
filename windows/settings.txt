@@ -1,0 +1,23 @@
+Regkey settings:
+
+KEY LOCATION																VALUE (DECIMAL)
+HKLM:\SYSTEM\CurrentControlSet\Services\W32Time\Config						6
+HKLM:\SYSTEM\CurrentControlSet\Services\W32Time\Config						6
+HKLM:\SYSTEM\CurrentControlSet\Services\W32Time\Config						100
+HKLM:\SYSTEM\CurrentControlSet\Services\W32Time\Config						2
+HKLM:\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpClient		64
+
+Also, make sure you run from PowerShell (as Admin):
+
+# w32tm /config /manualpeerlist:[ntp_server_hostname_or_ip_address] /syncfromflags:MANUAL
+# net stop w32time
+# net start w32time
+# w32tm /resync
+# w32tm /query /status
+
+If it says it's syncing from the NTP server, you're good to go.
+
+
+Source:
+https://docs.microsoft.com/en-us/windows-server/networking/windows-time-service/configuring-systems-for-high-accuracy?tabs=SpecialPollInterval
+https://support.microsoft.com/en-us/help/875424/time-synchronization-may-not-succeed-when-you-try-to-synchronize-with
