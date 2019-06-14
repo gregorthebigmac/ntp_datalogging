@@ -1,0 +1,9 @@
+192.168.13.225 ping statistics,,,
+5000 packets transmitted,,,
+5000 packets received,,,
+0% packet loss,,,
+time,,,
+ms, s, min, hrs
+4999188,"4,999.188",83.320,1.389
+rtt min (ms), avg (ms), max (ms), mdev (ms)
+0.481,0.773,5.388,0.163
